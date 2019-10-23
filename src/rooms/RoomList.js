@@ -13,12 +13,8 @@ import {
   DateField,
 } from 'react-admin';
 import PeopleIcon from '@material-ui/icons/People';
-import SearchIcon from '@material-ui/icons/Search';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import memoize from 'lodash/memoize';
-import ParseField from '../components/ParseField';
-import AgeField from '../components/AgeField';
-import ImagesField from '../components/ImagesField';
+import UsersField from '../components/UsersField';
 import { dateOptions } from '../utils';
 
 const UserFilter = ({ permissions, ...props }) => (
@@ -39,7 +35,7 @@ const UserList = ({ permissions, ...props }) => (
     {...props}
     filters={<UserFilter permissions={permissions} />}
     filterDefaultValues={{}}
-    sort={{ field: 'lastLoginAt', order: 'DESC' }}
+    sort={{ field: 'updatedAt', order: 'DESC' }}
   >
     <Responsive
       small={
@@ -52,13 +48,10 @@ const UserList = ({ permissions, ...props }) => (
       }
       medium={
         <Datagrid rowClick={rowClick(permissions)}>
-          <TextField source="email" />
-          <TextField source="name" />
-          <ParseField source="gender" label="성별" enums={{ M: '남', F: '여' }} />
-          <AgeField source="birthday" label="나이" />
-          <TextField source="location" />
-          <DateField source="lastLoginAt" label="마지막 접속" options={dateOptions} />
-          <ImagesField source="images" label="프로필사진" sortable={false} />
+          <UsersField source="users" />
+          <TextField source="lastMsg" />
+          <DateField source="updatedAt" label="변경일" options={dateOptions} />
+          <DateField source="createdAt" label="생성일" options={dateOptions} />
         </Datagrid>
       }
     />

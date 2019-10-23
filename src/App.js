@@ -14,7 +14,7 @@ import ProductIcon from '@material-ui/icons/CardGiftcard';
 import products from './products';
 
 import PlaceIcon from '@material-ui/icons/Place';
-import places from './places';
+import rooms from './rooms';
 
 
 // const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
@@ -34,8 +34,8 @@ const uploadCapableDataProvider = addUploadFeature(dataProvider);
 const App = () => (
   <Admin loginPage={Login} dashboard={Dashboard} authProvider={authProvider} dataProvider={uploadCapableDataProvider}>    
     <Resource name="users" icon={UserIcon} {...users} />
-    <Resource name="products" icon={ProductIcon} {...products} />
-    <Resource name="places" icon={PlaceIcon} {...places} />
+    <Resource name="rooms" icon={PlaceIcon} {...rooms} />
+    {/* <Resource name="products" icon={ProductIcon} {...products} /> */}
   </Admin>
 );
 

@@ -39,8 +39,10 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
       case GET_LIST: {
         const { page, perPage } = params.pagination;
         const { field, order } = params.sort;
+        let sort = {};
+        sort[field] = (order === 'ASC') ? 1 : -1;
         const query = {
-          sort: ((order === 'ASC') ? '' : '-') + field,
+          sort: JSON.stringify(sort),
           offset: (page - 1) * perPage,
           limit: perPage,
           filter: JSON.stringify(params.filter),
@@ -75,7 +77,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
       }
       case UPDATE:
         url = `${apiUrl}/${resource}/${params.id}/admin`;
-        options.method = 'PUT';        
+        options.method = 'PUT';
         options.body = JSON.stringify(params.data);
         break;
       case CREATE:
