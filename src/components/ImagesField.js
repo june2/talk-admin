@@ -7,7 +7,7 @@ const thumbStyle = {
 }
 
 const ImagesField = ({ source, record = {} }) => {
-  try {
+  try {    
     const images = _get(record, source);
     return (
       <Fragment>

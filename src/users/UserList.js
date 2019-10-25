@@ -1,20 +1,16 @@
 import React from 'react';
 import {
   Datagrid,
-  EditButton,
   Filter,
   List,
   Responsive,
   SearchInput,
-  ShowButton,
   SimpleList,
   TextField,
   TextInput,
   DateField,
 } from 'react-admin';
 import PeopleIcon from '@material-ui/icons/People';
-import SearchIcon from '@material-ui/icons/Search';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import memoize from 'lodash/memoize';
 import ParseField from '../components/ParseField';
 import AgeField from '../components/AgeField';

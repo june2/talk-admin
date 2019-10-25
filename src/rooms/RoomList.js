@@ -1,12 +1,10 @@
 import React from 'react';
 import {
   Datagrid,
-  EditButton,
   Filter,
   List,
   Responsive,
   SearchInput,
-  ShowButton,
   SimpleList,
   TextField,
   TextInput,

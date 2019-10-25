@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GET_LIST, GET_MANY, Responsive } from 'react-admin';
+import { Responsive } from 'react-admin';
 
 import MonthlyRevenue from './MonthlyRevenue';
 import NewCustomers from './NewCustomers';
@@ -15,18 +15,18 @@ const styles = {
 class Dashboard extends Component {
   state = {};
 
-  componentDidMount() {  
-  
+  componentDidMount() {
+
   }
 
   render() {
     const {
-      nbNewCustomers,     
+      nbNewCustomers,
       newCustomers,
       revenue,
     } = this.state;
     return (
-      <Responsive        
+      <Responsive
         medium={
           <div style={styles.flex}>
             <div style={styles.leftCol}>

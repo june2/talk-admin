@@ -1,1 +1,1 @@
-export const API_URL = process.env.NODE_ENV === 'production' ? 'http://34.85.11.68/api/v1' : 'http://localhost:3001';
+export const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.talknock.com' : 'http://localhost:3001';

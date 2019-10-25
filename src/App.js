@@ -10,9 +10,6 @@ import restProvider from './providers/restProvider.js';
 import UserIcon from '@material-ui/icons/Group';
 import users from './users';
 
-import ProductIcon from '@material-ui/icons/CardGiftcard';
-import products from './products';
-
 import PlaceIcon from '@material-ui/icons/Place';
 import rooms from './rooms';
 
@@ -35,7 +32,6 @@ const App = () => (
   <Admin loginPage={Login} dashboard={Dashboard} authProvider={authProvider} dataProvider={uploadCapableDataProvider}>    
     <Resource name="users" icon={UserIcon} {...users} />
     <Resource name="rooms" icon={PlaceIcon} {...rooms} />
-    {/* <Resource name="products" icon={ProductIcon} {...products} /> */}
   </Admin>
 );
 

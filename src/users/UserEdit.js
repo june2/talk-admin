@@ -1,26 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
   Edit,
   TabbedForm,
   FormTab,
   DisabledInput,
   TextInput,
-  required,
   TextField,
-  LongTextInput,
-  DateInput,
   NumberInput,
-  BooleanInput,
-  ImageInput,
-  ImageField,
-  FileInput,
-  FileField,
   DateField,
-  ReferenceManyField,
-  Datagrid,
-  EditButton,
   SelectInput,
-  Labeled
 } from 'react-admin';
 import RichTextInput from 'ra-input-rich-text';
 import ParseField from '../components/ParseField';
