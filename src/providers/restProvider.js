@@ -43,7 +43,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
         sort[field] = (order === 'ASC') ? 1 : -1;
         const query = {
           sort: JSON.stringify(sort),
-          offset: (page - 1) * perPage,
+          page: page,
           limit: perPage,
           filter: JSON.stringify(params.filter),
         };
@@ -65,7 +65,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
         const { field, order } = params.sort;
         const query = {
           sort: JSON.stringify([field, order]),
-          offset: (page - 1) * perPage,
+          page: page,
           limit: perPage,
           filter: JSON.stringify({
             ...params.filter,

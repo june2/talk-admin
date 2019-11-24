@@ -24,15 +24,12 @@ const UserEdit = props => (
       <FormTab label="summary">
         <DisabledInput label="Id" source="id" />
         <SelectInput source="state" label="계정 상태" choices={[
-          { id: 'ADMIN', name: '관리자' },
-          { id: 'WAITING', name: '대기' },
-          { id: 'REJECT', name: '반려' },
-          { id: 'NORMAL', name: '승인' },
-          { id: 'REWAITING', name: '재심사' },
+          { id: 'ADMIN', name: '관리자' },          
+          { id: 'NORMAL', name: '승인' },          
           { id: 'BLOCK', name: '블락' },
           { id: 'LEAVE', name: '탈퇴' },
           { id: 'SAMPLE', name: '샘플' },
-          { id: 'DATALK', name: '다톡' },
+          { id: 'DATALK', name: '다톡' },          
         ]} />
         <TextField source="email" label="이메일" />
         <TextInput source="name" label="이름" />

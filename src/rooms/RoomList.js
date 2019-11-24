@@ -35,15 +35,7 @@ const UserList = ({ permissions, ...props }) => (
     filterDefaultValues={{}}
     sort={{ field: 'updatedAt', order: 'DESC' }}
   >
-    <Responsive
-      small={
-        <SimpleList
-          primaryText={record => record.name}
-          secondaryText={record =>
-            permissions === 'admin' ? record.role : null
-          }
-        />
-      }
+    <Responsive      
       medium={
         <Datagrid rowClick={rowClick(permissions)}>
           <UsersField source="users" />

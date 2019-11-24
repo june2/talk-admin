@@ -9,36 +9,36 @@ import { translate } from 'react-admin';
 import CardIcon from './CardIcon';
 
 const styles = {
-    main: {
-        flex: '1',
-        marginRight: '1em',
-        marginTop: 20,
-    },
-    card: {
-        overflow: 'inherit',
-        textAlign: 'right',
-        padding: 16,
-        minHeight: 52,
-    },
+  main: {
+    flex: '1',
+    marginRight: '1em',
+    marginTop: 20,
+  },
+  card: {
+    overflow: 'inherit',
+    textAlign: 'right',
+    padding: 16,
+    minHeight: 52,
+  },
 };
 
 const MonthlyRevenue = ({ value, translate, classes }) => (
-    <div className={classes.main}>
-        <CardIcon Icon={DollarIcon} bgColor="#31708f" />
-        <Card className={classes.card}>
-            <Typography className={classes.title} color="textSecondary">
-                {'월 수입'}
-            </Typography>
-            <Typography variant="headline" component="h2">
-                {1000}
-            </Typography>
-        </Card>
-    </div>
+  <div className={classes.main}>
+    <CardIcon Icon={DollarIcon} bgColor="#31708f" />
+    <Card className={classes.card}>
+      <Typography className={classes.title} color="textSecondary">
+        {'월 수입'}
+      </Typography>
+      <Typography variant="headline" component="h2">
+        {1000}
+      </Typography>
+    </Card>
+  </div>
 );
 
 const enhance = compose(
-    withStyles(styles),
-    translate
+  withStyles(styles),
+  translate
 );
 
 export default enhance(MonthlyRevenue);

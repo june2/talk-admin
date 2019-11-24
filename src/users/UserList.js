@@ -9,6 +9,7 @@ import {
   TextField,
   TextInput,
   DateField,
+  
 } from 'react-admin';
 import PeopleIcon from '@material-ui/icons/People';
 import memoize from 'lodash/memoize';
@@ -37,17 +38,10 @@ const UserList = ({ permissions, ...props }) => (
     filterDefaultValues={{}}
     sort={{ field: 'lastLoginAt', order: 'DESC' }}
   >
-    <Responsive
-      small={
-        <SimpleList
-          primaryText={record => record.name}
-          secondaryText={record =>
-            permissions === 'admin' ? record.role : null
-          }
-        />
-      }
+    <Responsive      
       medium={
         <Datagrid rowClick={rowClick(permissions)}>
+          <TextField source="state" />
           <TextField source="email" />
           <TextField source="name" />
           <ParseField source="gender" label="성별" enums={{ M: '남', F: '여' }} />

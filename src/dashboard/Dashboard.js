@@ -3,6 +3,7 @@ import { Responsive } from 'react-admin';
 
 import MonthlyRevenue from './MonthlyRevenue';
 import NewCustomers from './NewCustomers';
+import Dummy from './Dummy';
 
 const styles = {
   flex: { display: 'flex' },
@@ -28,18 +29,27 @@ class Dashboard extends Component {
     return (
       <Responsive
         medium={
-          <div style={styles.flex}>
-            <div style={styles.leftCol}>
-              <div style={styles.flex}>
-                <MonthlyRevenue value={revenue} />
+          <div>
+            {/* <div style={styles.flex}>
+              <div style={styles.leftCol}>
+                <div style={styles.flex}>
+                  <MonthlyRevenue value={revenue} />
+                </div>
               </div>
-            </div>
-            <div style={styles.rightCol}>
-              <div style={styles.flex}>
-                <NewCustomers
-                  nb={nbNewCustomers}
-                  visitors={newCustomers}
-                />
+              <div style={styles.rightCol}>
+                <div style={styles.flex}>
+                  <NewCustomers
+                    nb={nbNewCustomers}
+                    visitors={newCustomers}
+                  />
+                </div>
+              </div>
+            </div> */}
+            <div style={styles.flex}>
+              <div style={styles.leftCol}>
+                <div style={styles.flex}>
+                  <Dummy value={revenue} />
+                </div>
               </div>
             </div>
           </div>
