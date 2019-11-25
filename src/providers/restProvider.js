@@ -35,6 +35,10 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
   const convertDataRequestToHTTP = (type, resource, params) => {
     let url = '';
     const options = {};
+    if (resource === 'user_real') {
+      resource = 'users';
+      params.filter = { state: 'NORMAL' }
+    }
     switch (type) {
       case GET_LIST: {
         const { page, perPage } = params.pagination;

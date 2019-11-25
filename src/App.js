@@ -9,6 +9,7 @@ import restProvider from './providers/restProvider.js';
 
 import UserIcon from '@material-ui/icons/Group';
 import users from './users';
+import users2 from './users2';
 
 import PlaceIcon from '@material-ui/icons/Place';
 import rooms from './rooms';
@@ -31,6 +32,7 @@ const uploadCapableDataProvider = addUploadFeature(dataProvider);
 const App = () => (
   <Admin loginPage={Login} dashboard={Dashboard} authProvider={authProvider} dataProvider={uploadCapableDataProvider}>    
     <Resource name="users" icon={UserIcon} {...users} />
+    <Resource name="user_real" icon={UserIcon} {...users2} />
     <Resource name="rooms" icon={PlaceIcon} {...rooms} />
   </Admin>
 );
