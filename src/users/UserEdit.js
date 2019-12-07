@@ -44,8 +44,8 @@ const UserEdit = props => (
         <DateField source="lastLoginAt" label="마지막 접속" options={dateOptions} sortable={false} />
         <ImagesThumbField label="프로필 사진" />
         <TextField source="pushToken" />
-        <TextField source="PlatformVer" />
-        <TextField source="PlatformOS" />
+        <TextField source="platformVer" />
+        <TextField source="platformOS" />
       </FormTab>
       {/* <FormTab label="포인트">
         <ImageInput source="pictures" label="Related pictures" accept="image/*" placeholder={<p>Drop your file here</p>} multiple={true}>
